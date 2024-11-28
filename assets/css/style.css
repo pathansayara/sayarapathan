@@ -785,6 +785,7 @@ section .container {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+
 .portfolio-details {
   padding-top: 40px;
   background: rgba(0, 0, 0, 0.8);
@@ -853,6 +854,112 @@ section .container {
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #18d26e;
 }
+
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+
+/* Row Styling */
+#services .row {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+/* Card Styling */
+#services .card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensures uniform height for all cards */
+}
+
+#services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Icon Styling */
+#services .card-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+#services .card:hover .card-icon {
+  color: #0056b3;
+}
+
+/* Card Title Styling */
+#services .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+#services .card:hover .card-title {
+  color: #007bff;
+}
+
+/* Card Text Styling */
+#services .card-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #services .card {
+    padding: 20px;
+  }
+
+  #services .card-icon {
+    font-size: 2.5rem;
+  }
+
+  #services .card-title {
+    font-size: 1.2rem;
+  }
+
+  #services  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #services .card {
+    margin-bottom: 20px;
+  }
+
+  #services .card-icon {
+    font-size: 2rem;
+  }
+
+  #services  .card-title {
+    font-size: 1.1rem;
+  }
+
+  #services .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Add Some Spacing Between Rows */
+#services .row .col-lg-4 {
+  margin-bottom: 30px;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1000,6 +1107,57 @@ section .container {
 .contact .php-email-form button[type=submit]:hover {
   background: #15bb62;
 }
+
+/* Input and textarea fields */
+form .form-group input,
+form .form-group textarea {
+  background: rgba(255, 255, 255, 0.08); 
+  border: none; 
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 0;
+  color: #817e7e; 
+  outline: none; 
+}
+
+/* Placeholder styling */
+form .form-group ::placeholder {
+  color: rgb(207, 205, 205); 
+}
+
+/* Focus state for input and textarea fields */
+form .form-group input:focus,
+form .form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.08); 
+  outline: none; 
+  box-shadow: none; 
+  border: 0.5px solid #717271; 
+  color: #fff; 
+}
+
+/* Textarea specific styling */
+form .form-group textarea {
+  resize: none; 
+}
+
+/* Submit button styling */
+form button {
+  background-color: #15bb62; 
+  color: white; 
+  border: none; 
+  margin-top: 15px;
+  font-weight: 700; 
+  border-radius: 5px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+/* Submit button hover effect */
+form button:hover {
+  background-color: #13a755; 
+}
+
 
 @keyframes animate-loading {
   0% {
