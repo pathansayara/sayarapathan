@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal
-* Updated: Aug 30 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -29,9 +22,48 @@ body::before {
   z-index: -1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
   body::before {
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* For devices with 1280x800 resolution */
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
+  body::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* For devices with 1024x600 resolution */
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+  body::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+/* For medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body::before {
+    background-attachment: scroll; 
+    background-position: center;
+  }
+}
+
+/* For smaller devices (mobile) */
+@media (max-width: 767px) {
+  body::before {
+    background-attachment: scroll; 
+    background-position: center top; 
+    background-size: cover; 
+    
   }
 }
 
@@ -185,6 +217,10 @@ h6 {
 @media (max-width: 768px) {
   #header.header-top {
     height: 60px;
+  }
+
+  #header h2{
+    padding-left: 60px;
   }
 
   #header.header-top h1 {
@@ -485,38 +521,47 @@ section .container {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
+.skills {
+  padding: 50px 0;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.skill-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card img {
+  width: 60px;
   height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
-  text-transform: uppercase;
-  display: block;
+.skill-card span {
+  font-size: 14px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #333;
+  margin-top: 10px;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #18d26e;
-}
 
 /*--------------------------------------------------------------
 # Interests
